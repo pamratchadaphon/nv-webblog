@@ -15,7 +15,4 @@ module.exports = (app) => {
 
     // get user by id
     app.get('/user/:userId', UserController.show)
-    
-    // get all user
-    app.get('/users', UserController.index) 
 }

@@ -7,6 +7,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extends:true}))
 
 require('./rout')(app)
+
 app.get('/status', function (req, res ){
     res.send('Hello nodejs server 12345678')
 })
