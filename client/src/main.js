@@ -1,12 +1,18 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import VueResource from 'vue-resource'
+import Vue from "vue";
+import App from "./App";
+import router from "./router";
+//import { sync } from "vuex-router-sync";
+import store from "./store";
+import VueResource from "vue-resource";
 
-Vue.config.productionTip = false
-Vue.use(VueResource)
-
+Vue.config.productionTip = false;
+Vue.use(VueResource);
+//sync(store, router);
+/* eslint-disable no-new */
 new Vue({
+  el: '#app',
   router,
-  render: function (h) { return h(App) }
-}).$mount('#app')
+  //store,
+  components: { App },
+  template: '<App/>' 
+})
