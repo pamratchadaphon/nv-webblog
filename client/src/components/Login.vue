@@ -42,7 +42,7 @@ export default {
 
 
                 this.$router.push({
-                    name: 'users'
+                    name: 'phones'
                 })
 
             } catch (error) {
